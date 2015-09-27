@@ -776,7 +776,6 @@ body.nav-opened .nav {
 
 body:not(.post-template) .post-title { font-size: 2.1rem; }
 
-
 .post-min-cover {
     background-image: url(/content/images/2015/09/slack_for_ios_upload_1024.jpg);
     background-size: contain;
@@ -792,39 +791,32 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     filter: sepia(70%);
     float: left;
     margin: 0 5px 5px 0;
-    position: relative;
     width: 130px;
-    z-index: 1
 }
 
 .post-min-cover:hover {
-    -webkit-transition: all 0.10s ease;
-    -moz-transition: all 0.10s ease;
-    -o-transition: all 0.10s ease;
-    transition: all 0.10s ease;
+    -webkit-transition: all 0.90s ease;
+    -moz-transition: all 0.90s ease;
+    -o-transition: all 0.90s ease;
+    transition: all 0.90s ease;
 
     box-shadow: -1px 1px 5px #666;
 
-    -webkit-filter: blur(0px) sepia(0%);
-    -moz-filter: blur(0px) sepia(0%);
-    -o-filter: blur(0px) sepia(0%);
-    filter: blur(0px) sepia(0%);
+    -webkit-filter: sepia(0%);
+    -moz-filter: sepia(0%);
+    -o-filter: sepia(0%);
+    filter: sepia(0%);
 
     height: 140px;
     margin: -5px 5px 0 -5px;
     opacity: 0.9;
-    position: relative;
     width: 140px;
-    z-index: 52;
 }
 
-.post-tile { 
-    box-shadow: -20px 0 30px #FFF;
+.post-tile {
     min-height: 140px;
     margin-left: 140px;
     padding-top: 5px;
-    position: relative;
-    z-index: 51;
 }
 
 .post-title a { text-decoration: none; }
