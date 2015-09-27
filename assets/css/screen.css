@@ -33,11 +33,7 @@ summary { display: block; }
 audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
-html {
-   font-family: sans-serif;
-   -ms-text-size-adjust: 100%;
-   -webkit-text-size-adjust: 100%;
-}
+html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 body { margin: 0; }
 a { background: transparent; }
 a:focus { outline: thin dotted; }
@@ -46,11 +42,7 @@ h1 { font-size: 2em; margin: 0.67em 0; }
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: 700; }
 dfn { font-style: italic; }
-hr {
-   -moz-box-sizing: content-box;
-   box-sizing: content-box;
-   height: 0;
-}
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
 samp { font-family: monospace, serif; font-size: 1em; }
@@ -68,21 +60,14 @@ sub { bottom: -0.25em; }
 img { border: 0; }
 svg:not(:root) { overflow: hidden; }
 figure { margin: 0; }
-fieldset {
-   border: 1px solid #c0c0c0;
-   margin: 0 2px;
-   padding: 0.35em 0.625em 0.75em;
-}
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 legend { border: 0; padding: 0; }
 button, input, select,
 textarea { font-family: inherit; font-size: 100%; margin: 0; }
 button, input { line-height: normal; }
 button, select { text-transform: none; }
 button, html input[type="button"],
-input[type="reset"], input[type="submit"] {
-   -webkit-appearance: button;
-   cursor: pointer;
-}
+input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
 button[disabled], html input[disabled] { cursor: default; }
 input[type="checkbox"],
 input[type="radio"] { box-sizing: border-box; padding: 0; }
@@ -132,38 +117,16 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\f600";
-}
-.icon-feed:before {
-    content: "\f601";
-}
-.icon-twitter:before {
-    content: "\f602";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\f603";
-}
-.icon-facebook:before {
-    content: "\f604";
-}
-.icon-arrow-left:before {
-    content: "\f605";
-}
-.icon-stats:before {
-    content: "\f606";
-}
-.icon-location:before {
-    content: "\f607";
-    margin-left: -3px; /* Tracking fix */
-}
-.icon-link:before {
-    content: "\f608";
-}
-.icon-menu:before {
-    content: "\f609";
-}
+.icon-ghost:before { content: "\f600"; }
+.icon-feed:before { content: "\f601"; }
+.icon-twitter:before { content: "\f602"; font-size: 1.1em;}
+.icon-google-plus:before { content: "\f603"; }
+.icon-facebook:before { content: "\f604"; }
+.icon-arrow-left:before { content: "\f605"; }
+.icon-stats:before { content: "\f606"; }
+.icon-location:before { content: "\f607"; margin-left: -3px; /* Tracking fix */}
+.icon-link:before { content: "\f608"; }
+.icon-menu:before { content: "\f609"; }
 /*
     IMPORTANT: When making any changes to the icon font, be sure to increment
     the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
@@ -187,22 +150,17 @@ body {
     max-height: 100%;
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
-    font-size: 1.8rem;
-    line-height: 1.75em;
-    color: #3A4145;
+    font-size: 1.6rem;
+    line-height: 2.1em;
+    color: #000;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     text-rendering: geometricPrecision;
 }
 
-::-moz-selection {
-    background: #D6EDFF;
-}
-
-::selection {
-    background: #D6EDFF;
-}
+::-moz-selection { background: #D6EDFF; }
+::selection { background: #D6EDFF; }
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -216,41 +174,15 @@ h4, h5, h6 {
     text-rendering: geometricPrecision;
 }
 
-h1 {
-    font-size: 5rem;
-    letter-spacing: -2px;
-    text-indent: -3px;
-}
+h1 { font-size: 5rem; letter-spacing: -2px; text-indent: -3px; }
+h2 { font-size: 3.6rem; letter-spacing: 0px; }
+h3 { font-size: 3rem; }
+h4 { font-size: 2.5rem; }
+h5 { font-size: 2rem; }
+h6 { font-size: 2rem; }
+a { color: #4A4A4A; transition: color 0.3s ease; }
 
-h2 {
-    font-size: 3.6rem;
-    letter-spacing: -1px;
-}
-
-h3 {
-    font-size: 3rem;
-}
-
-h4 {
-    font-size: 2.5rem;
-}
-
-h5 {
-    font-size: 2rem;
-}
-
-h6 {
-    font-size: 2rem;
-}
-
-a {
-    color: #4A4A4A;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #111;
-}
+a:hover { color: #111; }
 
 p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -260,15 +192,9 @@ p, ul, ol, dl {
     text-rendering: geometricPrecision;
 }
 
-ol, ul {
-    padding-left: 3rem;
-}
+ol, ul { padding-left: 3rem; }
 
-ol ol, ul ul,
-ul ol, ol ul {
-    margin: 0 0 0.4em 0;
-    padding-left: 2em;
-}
+ol ol, ul ul, ul ol, ol ul { margin: 0 0 0.4em 0; padding-left: 2em; }
 
 dl dt {
     float: left;
@@ -282,18 +208,9 @@ dl dt {
     margin-bottom: 1em;
 }
 
-dl dd {
-    margin-left: 200px;
-    margin-bottom: 1em
-}
-
-li {
-    margin: 0.4em 0;
-}
-
-li li {
-    margin: 0;
-}
+dl dd { margin-left: 200px; margin-bottom: 1em }
+li { margin: 0.4em 0; }
+li li { margin: 0; }
 
 hr {
     display: block;
@@ -312,11 +229,7 @@ blockquote {
     border-left: #4A4A4A 0.4em solid;
 }
 
-blockquote p {
-    margin: 0.8em 0;
-    font-style: italic;
-}
-
+blockquote p { margin: 0.8em 0;font-style: italic; }
 blockquote small {
     display: inline-block;
     margin: 0.8em 0 0.8em 1.5em;
@@ -325,17 +238,9 @@ blockquote small {
 }
 
 blockquote small:before { content: "\2014 \00A0"; }
-
-blockquote cite {
-    font-weight: 700;
-}
-
+blockquote cite { font-weight: 700; }
 blockquote cite a { font-weight: normal; }
-
-mark {
-    background-color: #fdffb6;
-}
-
+mark { background-color: #fdffb6; }
 code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
@@ -410,34 +315,21 @@ table caption + thead tr:first-child td,
 table colgroup + thead tr:first-child th,
 table colgroup + thead tr:first-child td,
 table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-    border-top: 0;
-}
+table thead:first-child tr:first-child td {border-top: 0;}
 
 table tbody + tbody { border-top: #EFEFEF 2px solid; }
-
 table table table { background-color: #FFF; }
-
 table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-    background-color: #F6F6F6;
-}
+table tbody > tr:nth-child(odd) > th { background-color: #F6F6F6; }
 
 table.plain tbody > tr:nth-child(odd) > td,
-table.plain tbody > tr:nth-child(odd) > th {
-   background: transparent;
-}
+table.plain tbody > tr:nth-child(odd) > th { background: transparent; }
 
-iframe, .fluid-width-video-wrapper {
-    display: block;
-    margin: 1.75em 0;
-}
+iframe, .fluid-width-video-wrapper { display: block; margin: 1.75em 0; }
 
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
-.fluid-width-video-wrapper iframe {
-    margin: 0;
-}
+.fluid-width-video-wrapper iframe {margin: 0;}
 
 
 /* ==========================================================================
@@ -446,19 +338,12 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Clears shit */
 .clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
+.clearfix:after { content: " ";display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
 /* Hides shit */
-.hidden {
-    text-indent: -9999px;
-    visibility: hidden;
-    display: none;
-}
+.hidden { text-indent: -9999px; visibility: hidden; display: none; }
 
 /* Creates a responsive wrapper that makes our content scale nicely */
 .inner {
@@ -469,10 +354,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* Centres vertically yo. (IE8+) */
-.vertical {
-    display: table-cell;
-    vertical-align: middle;
-}
+.vertical { display: table-cell; vertical-align: middle; }
 
 /* Wraps the main content & footer */
 .site-wrapper {
@@ -511,20 +393,11 @@ body.nav-opened .site-wrapper {
     overflow: hidden;
 }
 
-.main-header .inner {
-    width: 80%;
-}
+.main-header .inner { width: 80%; }
 
-.main-nav {
-    position: relative;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
-}
+.main-nav { position: relative; padding: 35px 40px; margin: 0 0 30px 0; }
 
-.main-nav a {
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
+.main-nav a { text-decoration: none; font-family: 'Open Sans', sans-serif; }
 
 /* Navigation */
 body.nav-opened .nav-cover {
@@ -706,10 +579,7 @@ body.nav-opened .nav {
     background: #fff;
     transition: all ease 0.3s;
 }
-.subscribe-button:before {
-    font-size: 9px;
-    margin-right: 6px;
-}
+.subscribe-button:before { font-size: 9px; margin-right: 6px; }
 
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
@@ -734,11 +604,7 @@ body.nav-opened .nav {
 }
 
 /* Stop it bouncing and increase contrast when hovered */
-.scroll-down:hover {
-    color: #fff;
-    -webkit-animation: none;
-    animation: none;
-}
+.scroll-down:hover { color: #fff; -webkit-animation: none; animation: none; }
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
@@ -756,12 +622,8 @@ body.nav-opened .nav {
 }
 
 /* Hide when there's no cover image or on page2+ */
-.no-cover .scroll-down,
-.no-cover.main-header:after,
-.archive-template .scroll-down,
-.archive-template .main-header:after {
-    display: none
-}
+.no-cover .scroll-down, .no-cover.main-header:after,
+.archive-template .scroll-down, .archive-template .main-header:after { display: none }
 
 /* Appears in the top left corner of your home page */
 .blog-logo {
@@ -807,31 +669,16 @@ body.nav-opened .nav {
     position: relative;
     top: 1px;
 }
-.menu-button:hover {
-    background: #fff;
-}
-.menu-button:focus {
-    outline: 0;
-}
+.menu-button:hover { background: #fff; }
+.menu-button:focus { outline: 0; }
 
 /* When the navigation is closed */
-.nav-closed .menu-button {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.6);
-}
-.nav-closed .menu-button:hover {
-    color: #222;
-}
+.nav-closed .menu-button { border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+.nav-closed .menu-button:hover { color: #222; }
 
 /* When the navigation is closed and there is no cover image */
-.nav-closed .no-cover .menu-button {
-    border-color: #BFC8CD;
-    color: #9EABB3;
-}
-.nav-closed .no-cover .menu-button:hover {
-    border-color: #555;
-    color: #555;
-}
+.nav-closed .no-cover .menu-button { border-color: #BFC8CD; color: #9EABB3; }
+.nav-closed .no-cover .menu-button:hover { border-color: #555; color: #555; }
 
 /* When the navigation is opened */
 .nav-opened .menu-button {
@@ -845,10 +692,7 @@ body.nav-opened .nav {
     transition: all 0.3s ease;
 }
 
-.nav-opened .menu-button .word {
-    opacity: 0;
-    transition: all 0.3s ease;
-}
+.nav-opened .menu-button .word { opacity: 0; transition: all 0.3s ease; }
 
 /* Special styles when overlaid on an image*/
 .main-nav.overlay {
@@ -860,9 +704,7 @@ body.nav-opened .nav {
     border: none;
     background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
 }
-.no-cover .main-nav.overlay {
-    background: none;
-}
+.no-cover .main-nav.overlay { background: none; }
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
@@ -884,19 +726,11 @@ body.nav-opened .nav {
     color: rgba(255,255,255,0.8);
 }
 
-.no-cover.main-header {
-    min-height: 160px;
-    max-height: 40vh;
-    background: #f5f8fa;
-}
+.no-cover.main-header { min-height: 160px; max-height: 40vh; background: #f5f8fa; }
 
-.no-cover .page-title {
-    color: rgba(0,0,0,0.8);
-}
+.no-cover .page-title { color: rgba(0,0,0,0.8); }
 
-.no-cover .page-description {
-    color: rgba(0,0,0,0.5);
-}
+.no-cover .page-description { color: rgba(0,0,0,0.5); }
 
 /* Add subtle load-in animation for content on the home page */
 .home-template .page-title {
@@ -917,8 +751,8 @@ body.nav-opened .nav {
     position: relative;
     width: 80%;
     max-width: 710px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
+    margin: 2rem auto 4rem;
+    padding-bottom: 1rem;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
 }
@@ -940,30 +774,66 @@ body.nav-opened .nav {
     box-shadow: #FFF 0 0 0 5px;
 }
 
-body:not(.post-template) .post-title {
-    font-size: 3.6rem;
+body:not(.post-template) .post-title { font-size: 2.1rem; }
+
+
+.post-min-cover {
+    background-image: url(/content/images/2015/09/slack_for_ios_upload_1024.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    box-shadow: 0 0 0 #000;
+    display: inline-block;
+    height: 130px;
+    -webkit-filter: sepia(70%);
+    -moz-filter: sepia(70%);
+    -o-filter: sepia(70%);
+    filter: sepia(70%);
+    float: left;
+    margin: 0 5px 5px 0;
+    position: relative;
+    width: 130px;
+    z-index: 1
 }
 
-.post-title a {
-    text-decoration: none;
+.post-min-cover:hover {
+    -webkit-transition: all 0.10s ease;
+    -moz-transition: all 0.10s ease;
+    -o-transition: all 0.10s ease;
+    transition: all 0.10s ease;
+
+    box-shadow: -1px 1px 5px #666;
+
+    -webkit-filter: blur(0px) sepia(0%);
+    -moz-filter: blur(0px) sepia(0%);
+    -o-filter: blur(0px) sepia(0%);
+    filter: blur(0px) sepia(0%);
+
+    height: 140px;
+    margin: -5px 5px 0 -5px;
+    opacity: 0.9;
+    position: relative;
+    width: 140px;
+    z-index: 52;
 }
 
-.post-excerpt p {
-    margin: 0;
-    font-size: 0.9em;
-    line-height: 1.7em;
+.post-tile { 
+    box-shadow: -20px 0 30px #FFF;
+    min-height: 140px;
+    margin-left: 140px;
+    padding-top: 5px;
+    position: relative;
+    z-index: 51;
 }
 
-.read-more {
-    text-decoration: none;
-}
-
+.post-title a { text-decoration: none; }
+.post-excerpt p { margin: 2rem 0 0 0 ; font-size: 0.9em; line-height: 1.7em; }
+.read-more { text-decoration: none; }
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
+    margin: 1.6rem 0 0 0;
+    font: 1.5rem/2.2rem "Open Sans", sans-serif;
     color: #9EABB3;
 }
 
@@ -1647,43 +1517,16 @@ body:not(.post-template) .post-title {
         font-size: 0.95em
     }
 
-    body:not(.post-template) .post-title {
-        font-size: 3.2rem;
-    }
+    body:not(.post-template) .post-title {font-size: 3.2rem;}
+    hr {margin: 2.4em 0;}
+    ol, ul {padding-left: 2em;}
 
-    hr {
-        margin: 2.4em 0;
-    }
-
-    ol, ul {
-        padding-left: 2em;
-    }
-
-    h1 {
-        font-size: 4.5rem;
-        text-indent: -2px;
-    }
-
-    h2 {
-        font-size: 3.6rem;
-    }
-
-    h3 {
-        font-size: 3.1rem;
-    }
-
-    h4 {
-        font-size: 2.5rem;
-    }
-
-    h5 {
-        font-size: 2.2rem;
-    }
-
-    h6 {
-        font-size: 1.8rem;
-    }
-
+    h1 {font-size: 4.5rem;text-indent: -2px;}
+    h2 { font-size: 3.6rem;}
+    h3 { font-size: 3.1rem;}
+    h4 { font-size: 2.5rem;}
+    h5 { font-size: 2.2rem;}
+    h6 { font-size: 1.8rem;}
     .author-profile {
         padding-bottom: 4rem;
     }
@@ -1837,73 +1680,32 @@ body:not(.post-template) .post-title {
         line-height: 1.65em;
     }
 
-    .post-date {
-        display: none;
-    }
+    .post-date { display: none; }
 
-    .post-template .post-header {
-        margin-bottom: 2rem;
-    }
+    .post-template .post-header { margin-bottom: 2rem; }
 
-    .post-template .post-date {
-        display: inline-block;
-    }
+    .post-template .post-date { display: inline-block; }
 
-    hr {
-        margin: 1.75em 0;
-    }
+    hr { margin: 1.75em 0; }
 
-    p, ul, ol, dl {
-        font-size: 0.95em;
-        margin: 0 0 2.5rem 0;
-    }
+    p, ul, ol, dl { font-size: 0.95em; margin: 0 0 2.5rem 0; }
 
-    .page-title {
-        font-size: 3rem;
-    }
+    .page-title { font-size: 3rem;}      
 
-    .post-excerpt p {
-        font-size: 0.85em;
-    }
+    .post-excerpt p { font-size: 0.8em; }
 
-    .page-description {
-        font-size: 1.6rem;
-    }
+    .page-description { font-size: 1.6rem; }
 
-    h1, h2, h3,
-    h4, h5, h6 {
-        margin: 0 0 0.3em 0;
-    }
+    h1, h2, h3, h4, h5, h6 { margin: 0 0 0.3em 0; }
 
-    h1 {
-        font-size: 2.8rem;
-        letter-spacing: -1px;
-    }
+    h1 { font-size: 2.8rem; letter-spacing: -1px; }
+    h2 {font-size: 2.4rem;letter-spacing: 0; }
+    h3 { font-size: 2.1rem; }
+    h4 { font-size: 1.9rem; }
+    h5 { font-size: 1.8rem; }
+    h6 { font-size: 1.8rem; }
 
-    h2 {
-        font-size: 2.4rem;
-        letter-spacing: 0;
-    }
-
-    h3 {
-        font-size: 2.1rem;
-    }
-
-    h4 {
-        font-size: 1.9rem;
-    }
-
-    h5 {
-        font-size: 1.8rem;
-    }
-
-    h6 {
-        font-size: 1.8rem;
-    }
-
-    body:not(.post-template) .post-title {
-        font-size: 2.5rem;
-    }
+    body:not(.post-template) .post-title { font-size: 1.8rem; }
 
     .post-template .site-footer {
         margin-top: 0;
