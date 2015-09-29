@@ -778,7 +778,8 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 
 .post-min-cover {
     background-image: url(/content/images/2015/09/slack_for_ios_upload_1024.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border-top-left-radius: 13px;
     border-bottom-left-radius: 13px;
