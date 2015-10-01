@@ -6,25 +6,29 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
+{{navigation}}
+			  
+<header class="main-header post-head">
+	{{#if image}}
+		<style>
+			.cover:before { background-image: url({{image}}); }
+		</style>
+		<div class="cover">
+			<img src="{{image}}" class="image" itemprop="image" alt="{{title}}"/>
+		</div>
+	{{/if}}    
 </header>
 
 <main class="content" role="main">
-    <article class="{{post_class}}">
+    <article class="{{post_class}}" itemid="{{url absolute='true'}}" itemscope itemtype="http://schema.org/LiveBlogPosting">
 
         <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
+            <h1 class="post-title" itemprop="headline">{{title}}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                <time class="post-date" itemprop="startDate" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
             </section>
         </header>
-
+		
         <section class="post-content">
             {{content}}
         </section>
@@ -36,7 +40,9 @@
 
             {{#if image}}
             <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                <a class="img" href="{{url}}" style="background-image: url({{image}})">
+					<span class="hidden">{{name}}'s Picture</span>
+				</a>
             </figure>
             {{/if}}
 
@@ -57,7 +63,7 @@
         {{/author}}
 
             <section class="share">
-                <h4>Share this post</h4>
+                <h4>Compartilhe esse Acontecimento</h4>
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
