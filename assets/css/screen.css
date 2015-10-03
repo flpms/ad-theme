@@ -355,15 +355,31 @@ margin on the iframe, cause it breaks stuff. */
 .home-template .main-header { background: #0F85AA no-repeat center center; box-sizing: border-box; padding-top: 8vh; }
 
 .main-header .inner { width: 80%; }
-.main-nav { position: relative; padding: 5px 21px; }
+.main-nav {
+	-webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.4);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    height: 34px;
+    left: 0;
+	padding: 5px 21px;
+    position: fixed;
+    right: 0;
+    top: 0;
+	z-index: 800;
+}
+
+.backdrop-fallback { background-color: #FFF; }
+
 .main-nav a { text-decoration: none; font-family: 'Open Sans', sans-serif; }
 
 /* Navigation */
-
+/* http://codepen.io/andreasstorm/pen/FbBdy*/
 .nav ul { 
 	display: inline-block;
 	list-style: none;
 	margin: 0 auto;
+	position: relative;
 	width: 80%;
 }
 .nav li { 
@@ -373,7 +389,6 @@ margin on the iframe, cause it breaks stuff. */
 	vertical-align: top;
 	width: 180px;
 }
-
 .nav li a {
     display: block;
     font: 1.4rem/1.4 "Open Sans", sans-serif;
@@ -384,9 +399,7 @@ margin on the iframe, cause it breaks stuff. */
     text-decoration: none;
     white-space: nowrap;
 }
-
 .nav a:link, .nav a:visited { color: #222; text-shadow: 0 1px 0 #B8B8B8; }
-
 .nav li.nav-current a, .nav a:hover, .nav a:active, .nav a:focus { color: #fff; }
 
 .subscribe-button {
@@ -418,7 +431,6 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Appears in the top left corner of your home page */
 a.blog-logo { display: block; float: left; }
-
 div.blog-logo {
 	background-size: contain;
 	display: block;
@@ -435,19 +447,6 @@ div.blog-logo {
     height: 38px;
     padding: 1px 0 5px 0;
     width: auto;
-}
-
-/* Special styles when overlaid on an image*/
-.main-nav.overlay {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 34px;
-    background: rgba(255, 255, 255, 0.4);
-	-webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -479,14 +478,16 @@ div.blog-logo {
     animation-delay: 0.2s;
 }
 
-.home-template div.blog-logo, .home-template .page-description {
+.home-template div.blog-logo, .home-template .page-description, .home-template .main-nav {
 	-webkit-animation: fade-in-down 0.9s;
     animation: fade-in-down 0.9s;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
 /* Main Content at home template */
-.content { background: #FFF; box-shadow: 1px -10px 20px #FFF; top: 38vh; height: 62vh; }
+.home-template .content { background: #FFF; box-shadow: 1px -10px 20px #FFF; top: 38vh; }
+
+.home-template .post { margin: 0rem auto 4rem; }
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -839,7 +840,7 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 .read-next-story .post { padding-top: 6rem; padding-bottom: 6rem; }
 
 .read-next-story .post:before {
-    content: "Read This Next";
+    content: "Continue Lendo";
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -877,7 +878,7 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 
 /* Correctly position site-footer when next to the .read-next container */
 .read-next + .site-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
