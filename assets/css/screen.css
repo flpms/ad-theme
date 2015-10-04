@@ -140,6 +140,7 @@ html {
 }
 
 body {
+    background: #F9F4EE;
     color: #000;
 	font: 1.6rem/2.1em "Merriweather", serif;
     height: 100%;
@@ -344,15 +345,17 @@ margin on the iframe, cause it breaks stuff. */
 .main-header {
     background: #222 no-repeat center center;
     background-size: cover;
-    margin-bottom: 5rem;
-	padding-top: 55px;
+    height: 180px;
+    min-height: 46vh;
+    padding-top: 55px;
+    position: fixed;
     overflow: hidden;
     text-align: center;
     width: 100%;
-	height: 46vh;
+    z-index: 100;
 }
 
-.home-template .main-header { background: #0F85AA no-repeat center center; box-sizing: border-box; padding-top: 8vh; }
+.home-template .main-header { background: #7CA3A8 no-repeat center center; box-sizing: border-box; padding-top: 8vh; }
 
 .main-header .inner { width: 80%; }
 .main-nav {
@@ -366,10 +369,10 @@ margin on the iframe, cause it breaks stuff. */
     position: fixed;
     right: 0;
     top: 0;
-	z-index: 800;
+	z-index: 1000;
 }
 
-.backdrop-fallback { background-color: #FFF; }
+.backdrop-fallback { background-color: rgba(255,255,255,0.5); }
 
 .main-nav a { text-decoration: none; font-family: 'Open Sans', sans-serif; }
 
@@ -469,7 +472,7 @@ div.blog-logo {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.no-cover .page-title, .no-cover .page-description { color: #F7FDFF; text-shadow: 0 -1px 0 rgba(0,0,0,0.8); }
+.no-cover .page-title, .no-cover .page-description { color: #F7FDFF; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8); }
 /* Add subtle load-in animation for content on the home page */
 .home-template .page-title {
     -webkit-animation: fade-in-down 0.6s;
@@ -485,7 +488,13 @@ div.blog-logo {
     animation-delay: 0.1s;
 }
 /* Main Content at home template */
-.home-template .content { background: #FFF; box-shadow: 1px -10px 20px #FFF; top: 38vh; }
+.home-template .content { 
+    background: #F9F4EE;
+    box-shadow: 1px -10px 20px #FFF;
+    position: relative;
+    top: 46vh;
+    z-index: 200;
+}
 
 .home-template .post { margin: 0rem auto 4rem; }
 
@@ -520,7 +529,7 @@ div.blog-logo {
 body:not(.post-template) .post-title { font-size: 2.1rem; }
 
 .post-min-cover {
-    background-image: url(/content/images/2015/09/slack_for_ios_upload_1024.jpg);
+    background-image: url('/content/images/2015/09/slack_for_ios_upload_1024.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -562,7 +571,14 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 .post-title a { text-decoration: none; }
 .post-excerpt p { margin: 2rem 0 0 0 ; font-size: 0.9em; line-height: 1.7em; }
 .read-more { text-decoration: none; }
-.post-meta { color: #9EABB3; display: block; font: 1.5rem/2.2rem "Open Sans", sans-serif; margin: 1.6rem 0 0 0; }
+.post-meta { 
+    color: #9EABB3;
+    display: block;
+    font: 1.5rem/2.2rem "Open Sans",
+    sans-serif;
+    margin: 1.6rem 0 0 0;
+    text-shadow: 0 -1px 1px #FFF;
+}
 
 .author-thumb {
     width: 24px;
@@ -838,7 +854,6 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 }
 
 .read-next-story .post { padding-top: 6rem; padding-bottom: 6rem; }
-
 .read-next-story .post:before {
     content: "Continue Lendo";
     padding: 4px 10px 5px;
@@ -856,18 +871,10 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 
 /* Special styles for posts with no cover images */
 .read-next-story.no-cover { background: #f5f8fa; }
-
 .read-next-story.no-cover:before { display: none; }
-
-.read-next-story.no-cover .post:before {
-    color: rgba(0,0,0,0.5);
-    border-color: rgba(0,0,0,0.2);
-}
-
+.read-next-story.no-cover .post:before { color: rgba(0,0,0,0.5); border-color: rgba(0,0,0,0.2); }
 .read-next-story.no-cover h2 { color: rgba(0,0,0,0.8); }
-
 .read-next-story.no-cover p { color: rgba(0,0,0,0.5); }
-
 /* if there are two posts without covers, put a border between them */
 .read-next-story.no-cover + .read-next-story.no-cover {
     border-left: rgba(0,0,100,0.04) 1px solid;
@@ -896,7 +903,6 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 
 /* Pastebin */
 .content .embedPastebin { margin-bottom: 1.75em; }
-
 
 /* ==========================================================================
    9. Pagination - Tools to let you flick between pages
@@ -960,13 +966,18 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
    ========================================================================== */
 
 .site-footer {
-    position: relative;
-    margin: 8rem 0 0 0;
-    padding: 1rem 15px;
+    background: #FFF;
+    box-sizing: border-box;
+    bottom: 0;
+    color: #BBC7CC;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
-    line-height: 1.75em;
-    color: #BBC7CC;
+    line-height: 1.618em;
+    margin: 8rem 0 0 0;
+    padding: 1rem 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
 }
 
 .site-footer a { color: #BBC7CC; text-decoration: none; font-weight: bold; }
@@ -987,9 +998,12 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
         box-sizing: border-box;
         height: auto;
         min-height: 240px;
-        height: 60vh;
+        height: 38vh;
         padding: 15% 0;
     }
+
+    .home-template .content { top: 38vh; }
+    .nav li {  width: 120px; }
 
     .scroll-down, .home-template .main-header:after { display: none; }
     .archive-template .main-header { min-height: 180px; padding: 10% 0; }
@@ -1002,7 +1016,7 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     hr {margin: 2.4em 0;}
     ol, ul {padding-left: 2em;}
     h1 {font-size: 4.5rem;text-indent: -2px;}
-    h2 { font-size: 3.6rem;}
+    h2 { font-size: 2.6rem;}
     h3 { font-size: 3.1rem;}
     h4 { font-size: 2.5rem;}
     h5 { font-size: 2.2rem;}
