@@ -353,6 +353,36 @@ body.nav-opened .site-wrapper {
             transition: transform 0.3s ease;
 }
 
+.arrow-right, .arrow-bottom { position: relative; background: #111; }
+.arrow-right:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(17, 17, 17, 0);
+    border-left-color: #111;
+    border-width: 8px;
+    margin-top: -8px;
+}
+
+.arrow-bottom:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(17, 17, 17, 0);
+    border-top-color: #111;
+    border-width: 8px;
+    margin-left: -8px;
+}
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -1255,7 +1285,7 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 }
 
 /* Facebook comments */
-
+.fb-comments { margin: 0 auto; width: 80%; }
 
 /* ==========================================================================
    9. Pagination - Tools to let you flick between pages
