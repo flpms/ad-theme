@@ -4,20 +4,33 @@
 
 /* globals jQuery, document */
 (function ($, undefined) {
-    "use strict";
+    'use strict';
 
     var $document = $(document);
 
     $document.ready(function () {
 
-        var $postContent = $(".post-content");
+        // Hide Facebook comments
+        $('#arrow').addClass('arrow-right');
+
+        // Listerner Comments click area
+        $('.post-comments h5').on('click', function(e){
+            e.preventDefault();
+            if () {
+
+                $('.fb-comments').toggleClass('hidden');
+                $('#arrow').removeClass('arrow-right').addClass('arrow-bottom');
+            }
+        });
+
+        var $postContent = $('.post-content');
         $postContent.fitVids();
 
-        $(".scroll-down").arctic_scroll();
+        $('.scroll-down').arctic_scroll();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
+        $('.menu-button, .nav-cover, .nav-close').on('click', function(e){
             e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
+            $('body').toggleClass('nav-opened nav-closed');
         });
 
     });
