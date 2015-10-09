@@ -1,0 +1,22 @@
+
+<nav class="main-nav nav clearfix">
+	{{^is "index"}} 
+		{{#if @blog.logo}}
+			<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+		{{/if}}
+	{{/is}}
+	<ul {{#is "index"}}style="display:block;"{{/is}}>
+		{{#foreach navigation}}
+			<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+				<a href="{{url absolute="true"}}">{{label}}</a>
+			</li>
+		{{/foreach}}
+
+		{{^is "index"}}
+			<li>Comentários</li>
+		{{/is}}
+	</ul>
+	{{^is "index"}}
+		<a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+	{{/is}}
+</nav>
