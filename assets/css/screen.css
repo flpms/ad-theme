@@ -724,10 +724,29 @@ body.nav-opened .nav {
 }
 
 body:not(.post-template) .post-title { font-size: 2.1rem; }
+.post-title a { text-decoration: none; }
 
-.post-title a {
-    text-decoration: none;
+.post-min-cover {
+    background: center no-repeat
+    background-size: cover;
+    -webkit-border-top-left-radius: 13px;
+    -webkit-border-bottom-left-radius: 13px;
+    -moz-border-radius-topleft: 13px;
+    -moz-border-radius-bottomleft: 13px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    box-shadow: 0 0 0 #000;
+    display: inline-block;
+    height: 130px;
+    -webkit-filter: sepia(70%);
+    -moz-filter: sepia(70%);
+    -o-filter: sepia(70%);
+    filter: sepia(70%);
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 130px;
 }
+
 
 .post-excerpt p {
     margin: 0;
