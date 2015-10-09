@@ -768,24 +768,16 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 }
 
 .post-info { min-height: 140px; margin-left: 140px; padding-top: 5px;}
-
-.post-excerpt p {
-    margin: 0;
-    font-size: 0.9em;
-    line-height: 1.7em;
-}
-
-.read-more {
-    text-decoration: none;
-}
+.post-excerpt p { margin: 2rem 0 0 0; font-size: 0.9em; line-height: 1.7em; }
+.read-more { text-decoration: none; }
 
 .post-meta {
-    display: block;
-    margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
     color: #9EABB3;
+    display: block;
+    font: 1.5rem/2.2rem "Open Sans",
+    sans-serif;
+    margin: 1.6rem 0 0 0;
+    text-shadow: 0 -1px 1px #FFF;
 }
 
 .author-thumb {
@@ -796,20 +788,9 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     border-radius: 100%;
 }
 
-.post-meta a {
-    color: #9EABB3;
-    text-decoration: none;
-}
-
-.post-meta a:hover {
-    text-decoration: underline;
-}
-
-.user-meta {
-    position: relative;
-    padding: 0.3rem 40px 0 100px;
-    min-height: 77px;
-}
+.post-meta a { color: #9EABB3; text-decoration: none; }
+.post-meta a:hover { text-decoration: underline; }
+.user-meta { min-height: 77px; position: relative; padding: 0.3rem 40px 0 100px; }
 
 .post-date {
     display: inline-block;
@@ -821,23 +802,9 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     white-space: nowrap;
 }
 
-.user-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.user-name {
-    display: block;
-    font-weight: 700;
-}
-
-.user-bio {
-    display: block;
-    max-width: 440px;
-    font-size: 1.4rem;
-    line-height: 1.5em;
-}
+.user-image { position: absolute; top: 0; left: 0; }
+.user-name { display: block; font-weight: 700; } 
+.user-bio { display: block; max-width: 440px; font-size: 1.4rem; line-height: 1.5em; }
 
 .publish-meta {
     position: absolute;
@@ -847,16 +814,8 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     text-align: right;
 }
 
-.publish-heading {
-    display: block;
-    font-weight: 700;
-}
-
-.publish-date {
-    display: block;
-    font-size: 1.4rem;
-    line-height: 1.5em;
-}
+.publish-heading { display: block; font-weight: 700; }
+.publish-date { display: block; font-size: 1.4rem; line-height: 1.5em; }
 
 
 /* ==========================================================================
