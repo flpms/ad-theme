@@ -10,17 +10,12 @@
 
     $document.ready(function () {
 
-        // Hide Facebook comments
-        $('#arrow').addClass('arrow-right');
-
         // Listerner Comments click area
         $('.post-comments h5').on('click', function(e){
-            e.preventDefault();
-            if () {
+            e.preventDefault(); 
 
-                $('.fb-comments').toggleClass('hidden');
-                $('#arrow').removeClass('arrow-right').addClass('arrow-bottom');
-            }
+            $('#fbCommentBox').toggleClass('hidden');
+            $('#arrow').toggleClass('arrow-right');
         });
 
         var $postContent = $('.post-content');

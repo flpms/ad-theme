@@ -72,11 +72,6 @@
                 </a>
             </section>
 
-            <section class="post-comments" id="comment">
-                <h5>Comentários <span id="arrow" ></span></h5>
-                <div class="fb-comments hidden" data-href="{{url absolute='true'}}" data-numposts="15"></div>
-            </section>
-
         </footer>
 
     </article>
@@ -100,6 +95,11 @@
     </a>
     {{/prev_post}}
 </aside>
+
+<section class="post-comments" id="comment">
+    <h5>Comentários</h5>
+    <div class="fb-comments" data-href="{{url absolute='true'}}" data-numposts="15"></div>
+</section>
 
 {{/post}}
 <div id="fb-root"></div>
