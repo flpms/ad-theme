@@ -19,6 +19,10 @@
     ==========================================================================
     0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
     ========================================================================== */
+/*
+        important this will be important, very important
+*/
+.real-date { display: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
 main, nav, section, summary { display: block; }
@@ -985,7 +989,7 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 .post-footer .share .icon-facebook:hover { color: #3b5998; }
 .post-footer .share .icon-google-plus:hover { color: #dd4b39; }
 
-.post-comments { margin: 30px auto 0 auto; width: 80%;}
+.post-comments { margin: 50px auto 0 auto; width: 80%;}
 
 .post-comments h5{ height: 42px; text-align: center; }
 
