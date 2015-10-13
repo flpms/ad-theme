@@ -28,6 +28,8 @@
             $('body').toggleClass('nav-opened nav-closed');
         });
 
+        var realDate = $('span[data-realDate]')[0].innerHTML;
+        $('.post-title').append('<span class="real-date">'+realDate+'</span>');
     });
 
     // Arctic Scroll by Paul Adam Davis
