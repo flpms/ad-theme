@@ -849,6 +849,13 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     margin-bottom: 0;
 }
 
+.post-template .real-date{
+    color: #AAA;
+    font-size: 0.6em;
+    float: right;
+    display: inline-block;
+}
+
 .post-template .post-meta {
     margin: 0;
 }
