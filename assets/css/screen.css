@@ -742,7 +742,13 @@ body.nav-opened .nav {
     box-shadow: #FFF 0 0 0 5px;
 }
 
-body:not(.post-template) .post-title { font-size: 2.1rem; }
+body:not(.post-template) .post-title { 
+    font-size: 2.1rem;
+    max-width: 580px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .post-title a { text-decoration: none; }
 
 .post-min-cover {
@@ -812,12 +818,12 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
 .user-meta { min-height: 77px; position: relative; padding: 0.3rem 40px 0 100px; }
 
 .post-date {
+    border-left: #d5dbde 1px solid;
     display: inline-block;
+    font-size: 1.3rem;
     margin-left: 8px;
     padding-left: 12px;
-    border-left: #d5dbde 1px solid;
     text-transform: uppercase;
-    font-size: 1.3rem;
     white-space: nowrap;
 }
 
@@ -856,14 +862,13 @@ body:not(.post-template) .post-title { font-size: 2.1rem; }
     display: inline-block;
 }
 
-.post-template .post-meta {
-    margin: 0;
-}
+.post-template .post-meta { display: block; margin: 0; float: none; }
 
 .post-template .post-date {
-    padding: 0;
-    margin: 0;
     border: none;
+    float: right;
+    margin: 0;
+    padding: 0;
 }
 
 /* Stop elements, such as img wider than the post content, from
