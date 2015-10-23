@@ -1526,7 +1526,8 @@ body:not(.post-template) .post-title {
     .nav-title { top: 25px }
     .nav-close { position: absolute; top: 18px }
     .nav ul { padding: 60px 9% 5% }
-
+    .nav li a { font-size: 1.9rem; padding: 0.8rem 4%; }
+    .nav li:before { font-size: 1.9rem; padding-top: 10px; }
     .inner, .pagination { margin: 2rem auto; width: auto }
 
     .post {
@@ -1535,18 +1536,22 @@ body:not(.post-template) .post-title {
         margin-bottom: 2rem;
         margin-left: 16px;
         margin-right: 16px;
+        min-height: 160px;
         padding-bottom: 2rem;
         line-height: 1.65em;
     }
+
+    .post-title { font-size: 2.0rem; }
+    .post-min-cover { height: 110px; margin-top: 40px; width: 110px; }
 
     .post-date { display: none }
     .post-template .post-header { margin-bottom: 2rem }
     .post-template .post-date { display: inline-block }
     hr { margin: 1.75em 0 }
-    p, ul, ol, dl { font-size: 0.95em; margin: 0 0 2.5rem 0 }
+    p, ul, ol, dl { font-size: 0.85em; line-height: 1.618em; margin: 0 0 2.5rem 0 }
 
     .page-title { font-size: 3rem }
-    .post-excerpt p { font-size: 0.85em }
+    .post-excerpt p { font-size: 0.74em; margin: 0.5rem 0 0 0; }
     .page-description { font-size: 1.6rem }
 
     h1, h2, h3, h4, h5, h6 { margin: 0 0 0.3em 0; }
@@ -1557,7 +1562,7 @@ body:not(.post-template) .post-title {
     h5 { font-size: 1.8rem }
     h6 { font-size: 1.8rem }
 
-    body:not(.post-template) .post-title { font-size: 2.5rem }
+    body:not(.post-template) .post-title { font-size: 2.4rem; margin-left: -144px; }
     .post-template .site-footer { margin-top: 0 }
     .post-content img {
         padding: 0;
