@@ -37,6 +37,10 @@
         if(window.innerWidth < 1000) {
             $('.special-ads').remove();
         }
+
+        if(window.innerWidth < 1000) {
+           $('.regular-ads').remove();
+        }
     });
 
     // Arctic Scroll by Paul Adam Davis
