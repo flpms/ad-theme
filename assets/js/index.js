@@ -38,7 +38,7 @@
             $('.special-ads').remove();
         }
 
-        if(window.innerWidth < 1000) {
+        if(window.innerWidth > 1000) {
            $('.regular-ads').remove();
         }
     });
