@@ -1278,15 +1278,20 @@ body:not(.post-template) .post-title {
    8. Third Party Elements - Embeds from other services
    ========================================================================== */
 /* Google */
+.post.tag-cinema { 
+  max-width: 1010px;
+}
+
 .special-cinema { 
     display: inline-block;
     margin-right: 10px;  
-    width: 680px;
+    max-width: 680px;
 }
 
 .special-ads {
     display: inline-block;
     margin-left: 10px;
+    vertical-align: top;
     width: 300px;
 }
 
