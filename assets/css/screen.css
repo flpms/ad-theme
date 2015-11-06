@@ -11,7 +11,7 @@
     7.  Read Next
     8.  Third Party Elements
     9.  Pagination
-    10.  Footer
+    10. Footer
     11. Media Queries (Tablet)
     12. Media Queries (Mobile)
     13. Animations
@@ -1277,6 +1277,18 @@ body:not(.post-template) .post-title {
 /* ==========================================================================
    8. Third Party Elements - Embeds from other services
    ========================================================================== */
+/* Google */
+.tag-cinema { 
+    display: inline-block;
+    margin-right: 10px;  
+    width: 680px;
+}
+
+.special-ads {
+    display: inline-block;
+    margin-left: 10px;
+    width: 300px;
+}
 
 /* Github */
 .gist table {

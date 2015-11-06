@@ -33,6 +33,10 @@
             var realDate = $('span[data-realDate]')[0].innerHTML;
             $('.post-title').append('<span class="real-date">'+realDate+'</span>');
         }
+
+        if(window.innerWidth < 1000) {
+            $('.special-ads').remove();
+        }
     });
 
     // Arctic Scroll by Paul Adam Davis
