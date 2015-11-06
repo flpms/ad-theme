@@ -22,7 +22,7 @@
             <h1 class="post-title">{{title}}</h1>
         </header>
 
-        <section class="post-content">
+        <section class="post-content {{#has tag='cinema'}}special-cinema{{/has}}">
             {{content}}
 
             <section class="post-meta">
@@ -30,6 +30,11 @@
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
             </section>
         </section>
+        {{#has tag="cinema"}}
+        <div class="special-ads">
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2675553538448246" data-ad-slot="4567805218"></ins>
+        <div>
+        {{/has}}
 
         <footer class="post-footer">
             {{! Everything inside the #author tags pulls data from the author }}
@@ -72,11 +77,7 @@
             </section>
         </footer>
     </article>
-    {{#has tag="cinema"}}
-    <div class="special-ads">
-        <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2675553538448246" data-ad-slot="4567805218"></ins>
-    <div>
-    {{/has}}
+    
 </main>
 
 <aside class="read-next">
