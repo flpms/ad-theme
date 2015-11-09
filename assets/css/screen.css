@@ -75,7 +75,7 @@ input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 button::-moz-focus-inner,
 input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
-table { border-collapse: collapse; border-spacing: 0; }
+/*table { border-collapse: collapse; border-spacing: 0; }*/
 
 
 /* ==========================================================================
@@ -135,7 +135,7 @@ html {
     height: 100%;
     max-height: 100%;
     font-size: 62.5%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(255, 251, 136, 0.5);
 }
 
 body {
@@ -282,7 +282,7 @@ kbd {
         0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
 }
-
+/*
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -308,6 +308,7 @@ table tbody + tbody { border-top: #EFEFEF 2px solid; }
 table table table { background-color: #FFF; }
 table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th { background-color: #F6F6F6; }
 table.plain tbody > tr:nth-child(odd) > td, table.plain tbody > tr:nth-child(odd) > th { background: transparent; }
+*/
 iframe, .fluid-width-video-wrapper { display: block; margin: 1.75em 0; }
 
 /* When a video is inside the fitvids wrapper, drop the
@@ -1278,15 +1279,9 @@ body:not(.post-template) .post-title {
    8. Third Party Elements - Embeds from other services
    ========================================================================== */
 /* Google */
-.post-template .post.tag-cinema { 
-  max-width: 1010px;
-}
+.post-template .post.tag-cinema { max-width: 1010px; }
 
-.post-template .special-cinema { 
-    display: inline-block;
-    margin-right: 10px;  
-    max-width: 680px;
-}
+.post-template .special-cinema { display:inline-block;margin-right:10px;max-width: 680px; }
 
 .post-template .special-ads {
     display: inline-block;
@@ -1295,17 +1290,13 @@ body:not(.post-template) .post-title {
     width: 300px;
 }
 
+/* Search */
+.google-search { max-width: 710px; margin: 0 auto; }
+.gsc-search-box { line-height: 0;  }
 /* Github */
-.gist table {
-    margin: 0;
-    font-size: 1.4rem;
-}
-.gist td {
-    line-height: 1.4;
-}
-.gist .line-number {
-    min-width: 25px;
-}
+.gist table { margin: 0; font-size: 1.4rem; }
+.gist td { line-height: 1.4;}
+.gist .line-number {min-width: 25px;}
 
 /* Pastebin */
 .content .embedPastebin {
@@ -1461,8 +1452,15 @@ body:not(.post-template) .post-title {
 
     .archive-template .main-header { min-height: 180px; padding: 10% 0 }
 
-    .blog-logo img { padding: 4px 0 }
-
+    .blog-logo img { padding: 4px 0; display: inline; vertical-align: bottom; }
+    .post-template .blog-logo:after {
+        color: #FFF;
+        content: 'Início';
+        display: inline;
+        text-shadow: 0 -1px 0 #666;
+        vertical-align: super;
+    }
+    
     .page-title { font-size: 4rem; letter-spacing: -1px }
     .page-description { font-size: 1.8rem; line-height: 1.5em}
 
@@ -1529,6 +1527,13 @@ body:not(.post-template) .post-title {
 
     .blog-logo { padding: 5px }
     .blog-logo img { height: 42px }
+    .blog-logo:after {
+        color: #FFF;
+        content: 'Início';
+        display: inline;
+        vertical-align: top;
+    }
+    
     .menu-button {
         padding: 0 5px;
         border-radius: 0;
