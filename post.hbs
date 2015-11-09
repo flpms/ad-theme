@@ -20,44 +20,48 @@
 
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
         </header>
 
-        <section class="post-content">
+        <section class="post-content {{#has tag='Cinema'}}special-cinema{{/has}}">
             {{content}}
+
+            <section class="post-meta">
+                <p class="tag-list">Postado {{tags prefix=" em "}}</p>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
+            </section>
         </section>
+        {{#has tag="Cinema"}}
+        <div class="special-ads">
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2675553538448246" data-ad-slot="4567805218"></ins>
+        </div>
+        {{/has}}
 
         <footer class="post-footer">
-
-        {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
-
-            {{#if image}}
-            <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
-            </figure>
-            {{/if}}
-
-            <section class="author">
-                <h4><a href="{{url}}">{{name}}</a></h4>
-
-                {{#if bio}}
-                    <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#author}}
+                {{#if image}}
+                <figure class="author-image">
+                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}} foto</span></a>
+                </figure>
                 {{/if}}
-                <div class="author-meta">
-                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-                </div>
-            </section>
 
-        {{/author}}
+                <section class="author">
+                    <h4><a href="{{url}}">{{name}}</a></h4>
+
+                    {{#if bio}}
+                        <p>{{bio}}</p>
+                    {{else}}
+                        <p>Leia <a href="{{url}}">outros posts</a> de {{name}}.</p>
+                    {{/if}}
+                    <div class="author-meta">
+                        {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+                        {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    </div>
+                </section>
+            {{/author}}
 
             <section class="share">
-                <h4>Share this post</h4>
+                <h4>Compartilhe</h4>
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
@@ -71,9 +75,7 @@
                     <span class="hidden">Google+</span>
                 </a>
             </section>
-
         </footer>
-
     </article>
 </main>
 
@@ -96,4 +98,17 @@
     {{/prev_post}}
 </aside>
 
+<section class="post-comments" id="comment">
+    <h5>Comentários</h5>
+    <div class="fb-comments" data-href="{{url absolute='true'}}" data-numposts="15"></div>
+</section>
+
 {{/post}}
+<div id="fb-root"></div>
+<script>(function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(d.getElementById(id))return;
+  js=d.createElement(s);js.id=id;
+  js.src="//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js,fjs);
+}(document,'script','facebook-jssdk'));</script>

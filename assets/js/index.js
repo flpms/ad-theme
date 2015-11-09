@@ -4,22 +4,43 @@
 
 /* globals jQuery, document */
 (function ($, undefined) {
-    "use strict";
+    'use strict';
 
     var $document = $(document);
 
     $document.ready(function () {
 
-        var $postContent = $(".post-content");
-        $postContent.fitVids();
+        // Listerner Comments click area
+        $('.post-comments h5').on('click', function(e){
+            e.preventDefault(); 
 
-        $(".scroll-down").arctic_scroll();
-
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
-            e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
+            $('#fbCommentBox').toggleClass('hidden');
+            $('#arrow').toggleClass('arrow-right');
         });
 
+        var $postContent = $('.post-content');
+        $postContent.fitVids();
+
+        $('.scroll-down').arctic_scroll();
+
+        $('.menu-button, .nav-cover, .nav-close').on('click', function(e){
+            e.preventDefault();
+            $('body').toggleClass('nav-opened nav-closed');
+        });
+
+        if ($('span[data-realDate]')[0]) {
+
+            var realDate = $('span[data-realDate]')[0].innerHTML;
+            $('.post-title').append('<span class="real-date">'+realDate+'</span>');
+        }
+
+        if(window.innerWidth < 1000) {
+            $('.special-ads').remove();
+        }
+
+        if(window.innerWidth > 1000) {
+           $('.regular-ads').remove();
+        }
     });
 
     // Arctic Scroll by Paul Adam Davis
