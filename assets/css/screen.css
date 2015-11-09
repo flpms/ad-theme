@@ -1292,7 +1292,8 @@ body:not(.post-template) .post-title {
 
 /* Search */
 .google-search { max-width: 710px; margin: 0 auto; }
-.gsc-search-box { line-height: 0;  }
+.gsc-search-box { line-height: 0; }
+.gsc-results-wrapper-visible { line-height: 1; }
 /* Github */
 .gist table { margin: 0; font-size: 1.4rem; }
 .gist td { line-height: 1.4;}
