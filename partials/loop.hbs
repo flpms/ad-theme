@@ -5,6 +5,7 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
+
 <article class="{{post_class}} ">
     {{#if image}}
         <a href="{{url}}">
@@ -16,7 +17,7 @@
             <h2 class="post-title"><a href="{{url}}" title="{{{title}}}">{{{title}}}</a></h2>
         </header>
         <section class="post-excerpt">
-            <p>{{excerpt characters="120"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            <p><a class="read-more" href="{{url}}">{{excerpt characters="120"}} ...</a></p>
         </section>
         <footer class="post-meta">
             {{author}}
@@ -25,6 +26,6 @@
     </div>
 </article>
 {{/foreach}}
-
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2675553538448246" data-ad-slot="4947215213" data-ad-format="auto"></ins><br />
 {{! Previous/next page links - displayed on every page }}
 {{pagination}}
